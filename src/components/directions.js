@@ -1,8 +1,8 @@
 // import React from 'react'
-
+// import * as MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 // import mapboxgl from 'mapbox-gl'
 
-// const MapboxDirections = window.MapboxDirections
+
 // mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
 
 // let Directions = class Directions extends React.Component {

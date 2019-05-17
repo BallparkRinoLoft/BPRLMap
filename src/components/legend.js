@@ -14,7 +14,7 @@ let Legend = class Legend extends React.Component {
     const renderLegendKeys = (stop, i) => {
       return (
         <div key={i} className='txt-s'>
-          <span className='mr6 round-full w12 h12 inline-block align-middle' style={{ backgroundColor: stop[1] }} />
+          <span className='mr6 w12 h12 inline-block align-middle' style={{ backgroundColor: stop[1] }} />
           <span>{`${stop[0].toLocaleString()}`}</span>
         </div>
       );
