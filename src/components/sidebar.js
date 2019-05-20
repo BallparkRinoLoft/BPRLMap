@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { mylist } from './list'
+import directions from './directions'
 
 
 let SideBar = class SideBar extends React.Component {
@@ -10,7 +12,7 @@ let SideBar = class SideBar extends React.Component {
      
 
   render(){
-    const mylist = ['Crema Coffee Shop', 'Star Bar', 'Denver Central Market', 'El Chipultepec', 'Work and Class'];
+  
     this.props.active;
     return(
       <div class='viewport-full relative scroll-hidden'>
@@ -25,7 +27,7 @@ let SideBar = class SideBar extends React.Component {
                 </div>
                 <h4 class='txt-m txt-bold px12 py12 scroll-auto'>Here are few reccomended spots in the area:</h4>
                 
-                <SimpleList list={mylist} />
+                <List list={mylist} />
                 
                 <footer class='px12 py12 bg-gray-faint round-b-ml txt-s'>
                   Ballpark Rino Loft
@@ -37,10 +39,12 @@ let SideBar = class SideBar extends React.Component {
     }
 }
 
-const SimpleList = ({ list }) => (
+const List = ({ list }) => (
   <ul>
     {list.map(item => (
-      <li class='px12 py12 scroll-auto shadow-darken25-on-hover cursor-pointer' key={item}>{item}</li>
+      <li class='px12 py12 pt3 scroll-auto shadow-darken25-on-hover cursor-pointer' key={item.id} onClick={()=>directions.setDestination(item.location)}>
+        <div>{item.name}</div>
+      </li>
     ))}
   </ul>
 );

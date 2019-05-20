@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import mapboxgl from 'mapbox-gl'
 import { connect } from 'react-redux'
-import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
+import directions from './directions'
+
 mapboxgl.accessToken = 'pk.eyJ1IjoicjN3ZWJlcjEiLCJhIjoiY2lyM3lhc3FnMDFrZ2Zwbm04cncwa2JkMiJ9.AeYZqyDiobmuxAVfIKE8gA';
 
 let Map = class Map extends React.Component {
@@ -32,19 +33,23 @@ let Map = class Map extends React.Component {
       container: this.mapContainer,
       style: 'mapbox://styles/r3weber1/cjvcsqbtv6yt01fqxdd96ab5u',
       center: [-104.98879, 39.75330],
-      zoom: 17
+      zoom: 12
     
     });
     // var MapboxDirections = require('@mapbox/mapbox-gl-directions');
-    const directions = new MapboxDirections({
-      accessToken: mapboxgl.accessToken,
-      // steps: true,
-      geometries: 'polyline',
-      profile: 'mapbox/walking'
-      // controls: {instructions:false}
-    });
+    // const directions = new MapboxDirections({
+    //   accessToken: mapboxgl.accessToken,
+    //   // steps: true,
+    //   geometries: 'polyline',
+    //   profile: 'mapbox/walking'
+    //   // controls: {instructions:false}
+    // });
     this.map.addControl(directions, 'top-right');
     directions.setOrigin('2193 Arapahoe St, Denver CO 80205');
+    
+
+    
+
   
     
     
