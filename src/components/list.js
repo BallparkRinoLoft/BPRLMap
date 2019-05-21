@@ -1,9 +1,9 @@
     export const mylist = [
     {
-        id: 'a',
-        name: 'Crema Coffee Shop',
-        description: 'Good coffee shop worth checking out',
-        location: '2862 Larimer St, Denver, CO 80205',
+        id:'f',
+        name: 'Ratio Beerworks',
+        description: 'Great brewery for hanging and sipping brewskies',
+        location: '2920 Larimer St, Denver, CO 80205'
     },
     {
         id: 'b',
@@ -28,6 +28,12 @@
         name: 'Work and Class',
         description: 'Great spot for dinner family style',
         location:'2500 Larimer St, Denver, CO 80205',
+    },
+    {
+        id: 'a',
+        name: 'Crema Coffee Shop',
+        description: 'Good coffee shop worth checking out',
+        location: '2862 Larimer St, Denver, CO 80205',
     },
 ];
 
