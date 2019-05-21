@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import mapboxgl from 'mapbox-gl'
 import { connect } from 'react-redux'
 import directions from './directions'
+import geolocate from './geolocate'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicjN3ZWJlcjEiLCJhIjoiY2lyM3lhc3FnMDFrZ2Zwbm04cncwa2JkMiJ9.AeYZqyDiobmuxAVfIKE8gA';
 
@@ -23,9 +24,6 @@ let Map = class Map extends React.Component {
     active: PropTypes.object.isRequired
   };
 
-  // componentDidUpdate() {
-  //   this.setFill();
-  // }
 
   componentDidMount() {
     const { lng, lat, zoom } = this.state;
@@ -36,29 +34,31 @@ let Map = class Map extends React.Component {
       zoom: 12
     
     });
-    // var MapboxDirections = require('@mapbox/mapbox-gl-directions');
-    // const directions = new MapboxDirections({
-    //   accessToken: mapboxgl.accessToken,
-    //   // steps: true,
-    //   geometries: 'polyline',
-    //   profile: 'mapbox/walking'
-    //   // controls: {instructions:false}
-    // });
+    // add geolocate control
+    this.map.addControl(geolocate)
+    // add directions api control to map and set origin
     this.map.addControl(directions, 'top-right');
     directions.setOrigin('2193 Arapahoe St, Denver CO 80205');
+    // set default start location from current location on click of geo locater
+    geolocate.on('geolocate', (e) => {
+      const lon = e.coords.longitude;
+      const lat = e.coords.latitude;
+      const position = [lon, lat];
+      directions.setOrigin(position);
+    });
     
 
     
 
   
     
-    
+    // load layer from source
     this.map.on('load', () => {
       this.map.addSource('avoid_areas', {
         type: 'geojson',
         data: this.props.data
       });
-
+      // add layer to map
       this.map.addLayer({
         id: 'avoid_areas',
         type: 'fill',
@@ -68,11 +68,9 @@ let Map = class Map extends React.Component {
           'fill-opacity': 0.5,
           'fill-outline-color': 'black'
           },
-      }); // ID metches `mapbox/streets-v9`
-     
-     
-      // this.setFill();
+      }); 
     }); 
+    // on click event in the map get the coordinates and zoom level
     this.map.on('click', (e) => {
         const { lng, lat } = e.lngLat;
         // const lat = e.lngLat.lat;

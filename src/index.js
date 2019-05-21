@@ -7,7 +7,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import Map from './components/map'
 // import Toggle from './components/toggle'
 import Legend from './components/legend'
-// import Directions from './components/directions'
+
 import SideBar from './components/sidebar'
 
 class Application extends React.Component {
