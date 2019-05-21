@@ -22,7 +22,7 @@ let SideBar = class SideBar extends React.Component {
                 <div class='hmax600 px6 py6 scroll-auto'>
                   <h3 class='txt-m txt-bold mb6'>Araphoe Square Neighborhood</h3>
                   
-                    <p>The neighborhood of the Ball Park Rino Loft is actually Arapahoe Square.  It is in proximity to the popular Ballpark and River North (RINO) neighborhoods hence the name. Take note of the red polygon and find your way around it since those sidewalks are not ideal for foot traffic.</p> 
+                    <p>The Paris Lofts are located in the Arapahoe Square Neighborhood.  Take note of the red polygon and find your way around it since those sidewalks are not ideal for foot traffic.</p> 
                     <h4 class='txt-m txt-bold px6 py6'>Reccomended Spots:</h4>   
                     <List list={mylist} />              
                 </div>
