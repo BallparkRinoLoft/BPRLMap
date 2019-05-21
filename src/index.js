@@ -6,7 +6,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // import { setActiveOption } from './redux/action-creators'
 import Map from './components/map'
 // import Toggle from './components/toggle'
-import Legend from './components/legend'
+// import Legend from './components/legend'
 
 import SideBar from './components/sidebar'
 
@@ -17,7 +17,7 @@ class Application extends React.Component {
         <div>
           <SideBar />
           <Map />
-          <Legend />
+          
         </div>
       </Provider>
     );
