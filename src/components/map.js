@@ -4,6 +4,7 @@ import mapboxgl from 'mapbox-gl'
 import { connect } from 'react-redux'
 import directions from './directions'
 import geolocate from './geolocate'
+import SideBar from './sidebar'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicjN3ZWJlcjEiLCJhIjoiY2lyM3lhc3FnMDFrZ2Zwbm04cncwa2JkMiJ9.AeYZqyDiobmuxAVfIKE8gA';
 
@@ -96,10 +97,12 @@ let Map = class Map extends React.Component {
     const {lng, lat, zoom} = this.state;
     return (
       <div>
+        <SideBar />
         <div className="inline-block absolute top align-center mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
           <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
         </div>
-        <div ref={el => this.mapContainer = el} className="absolute top right left bottom" />  
+        <div ref={el => this.mapContainer = el} className="absolute top right left bottom" />
+          
       </div>
       
     );

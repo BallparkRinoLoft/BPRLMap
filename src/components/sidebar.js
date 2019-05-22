@@ -15,14 +15,14 @@ let SideBar = class SideBar extends React.Component {
   
     this.props.active;
     return(
-      <div class='viewport-full relative scroll-auto'>
-            <div class='bg-darken20 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
-            <div class='absolute top-ml left bottom z1 w-auto w240-ml px6 pt60-ml'>
-              <div class='flex-parent flex-parent--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken10'>
+      <div class='viewport-full relative scroll-hidden'>
+            <div class='bg-darken10 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
+            <div class='absolute top-ml left bottom z1 w-full w240-ml px12 my60'>
+              <div class='flex-parent flex-parent--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken50-bold'>
                 <div class='px6 py6 scroll-auto'>
                   <h3 class='txt-m txt-bold mb6'>Araphoe Square Neighborhood</h3>
                   
-                    <p>The Paris Lofts are located in the Arapahoe Square Neighborhood.  Take note of the red polygon and find your way around it since those sidewalks are not ideal for foot traffic.</p> 
+                    <p>The Paris Lofts are located in the Arapahoe Square Neighborhood.  Here is a list of some of the places I frequent when I am downtown.</p> 
                     <h4 class='txt-m txt-bold px6 py6'>Reccomended Spots:</h4>   
                     <List list={mylist} />              
                 </div>

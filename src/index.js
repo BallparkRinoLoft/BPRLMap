@@ -8,14 +8,14 @@ import Map from './components/map'
 // import Toggle from './components/toggle'
 // import Legend from './components/legend'
 
-import SideBar from './components/sidebar'
+// import SideBar from './components/sidebar'
 
 class Application extends React.Component {
   render() {
     return (
       <Provider store={store}>
         <div>
-          <SideBar />
+          
           <Map />
           
         </div>

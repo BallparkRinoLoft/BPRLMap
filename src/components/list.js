@@ -2,8 +2,14 @@
     {
         id:'f',
         name: 'Ratio Beerworks',
-        description: 'Great brewery for hanging and sipping brewskies',
+        description: 'Great brewery for hanging and sipping',
         location: '2920 Larimer St, Denver, CO 80205'
+    },
+    {
+        id:'g',
+        name: 'Our Mutual Friend Brewing',
+        description: 'Good brewery hop stop patio no tvs',
+        location:'2810 Larimer St, Denver, CO 80205'
     },
     {
         id: 'b',
@@ -13,14 +19,14 @@
     },
     {
         id: 'c',
-        name: 'Denver Central Market',
+        name: 'Milk Market',
         description: 'Food court with great options and nice bar good to watch sports',
-        location: '2669 Larimer St, Denver, CO 80205',
+        location: '1800 Wazee St, Denver, CO 80202',
     },
     {
         id: 'd',
         name:'El Chipultepec',
-        description: 'one of the oldest bars in Denver great live music',
+        description: 'One of the oldest bars in Denver great live music',
         location:'1962 Market St, Denver, CO 80202',
     },
     {
@@ -31,9 +37,9 @@
     },
     {
         id: 'a',
-        name: 'Crema Coffee Shop',
-        description: 'Good coffee shop worth checking out',
-        location: '2862 Larimer St, Denver, CO 80205',
+        name: '20th St Cafe',
+        description: 'Good breakfast cheap greasy spoon no alcohol great for hangovers',
+        location: '1123 20th St, Denver, CO 80202',
     },
 ];
 
