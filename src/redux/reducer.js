@@ -1,6 +1,7 @@
 import * as Constants from '../constants'
 import data from '../avoid_areas.geojson'
 
+
 const options = [{
   name: 'Homeless Camp Area',
   description: 'Higher concentration of homeless',
@@ -31,6 +32,8 @@ const initialState: State = {
   options,
   active: options[0]
 };
+
+
 
 function reducer(state = initialState, action) {
   switch (action.type) {

@@ -9,6 +9,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmb
         accessToken: mapboxgl.accessToken,
         // steps: false,
         geometries: 'polyline',
+        interactive: false,
         profile: 'mapbox/walking'
         // controls: {instructions:false}
       });
