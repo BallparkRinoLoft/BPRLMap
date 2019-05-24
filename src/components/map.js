@@ -96,24 +96,33 @@ let Map = class Map extends React.Component {
       // });
       // this.map.setLayoutProperty('markers', "Name");
     // });
-      this.map.addLayer({
-        id: 'avoid_areas',
-        type: 'fill',
-        source: 'avoid_areas',
-        paint: {
-          'fill-color': 'red',
-          'fill-opacity': 0.5,
-          'fill-outline-color': 'black'
-          },
-      }); 
+      // this.map.addLayer({
+      //   id: 'avoid_areas',
+      //   type: 'fill',
+      //   source: 'avoid_areas',
+      //   paint: {
+      //     'fill-color': 'red',
+      //     'fill-opacity': 0.5,
+      //     'fill-outline-color': 'black'
+      //     },
+      // }); 
       this.map.addLayer({
         id: 'neighborhoods',
         type: 'fill',
         source: 'neighborhoods',
         paint: {
-          'fill-color': 'transparent',
-        //   'fill-opacity': 0.5,
+          'fill-color': ['match',
+          ['get', 'Name'],
+          'Arapahoe Square', '#fbb03b',
+          'Highland', '#223b53',
+          'River North', '#e55e5e',
+          'Five Points', '#3bb2d0',
+          'Sunnyside', '#32CD32',
+          /* other */ '#ccc'
+          ],
+          'fill-opacity': 0.2,
           'fill-outline-color': 'black'
+          
           },
       }); 
       
