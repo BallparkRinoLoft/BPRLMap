@@ -15,7 +15,7 @@ let SideBar = class SideBar extends React.Component {
   
     this.props.active;
     return(
-      <div class='viewport-full relative scroll-hidden'>
+      <div className='sidebar' class='viewport-full relative scroll-hidden'>
             <div class='bg-darken10 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
             <div class='absolute top-ml left bottom z1 w-full w240-ml px12 my60'>
               <div class='flex-parent flex-parent--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken50-bold'>
