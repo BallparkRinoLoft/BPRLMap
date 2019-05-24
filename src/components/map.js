@@ -6,21 +6,12 @@ import { connect } from 'react-redux'
 import directions from './directions'
 import geolocate from './geolocate'
 import SideBar from './sidebar'
-// import Markers from './markers'
+
 import neighborhoods from '../denverNeighborhoods.geojson'
-import points from '../nbhdpoints.geojson'
-// import Layer from "react-map-gl";
-// import Feature from "react-map-gl";
-// // import ReactMapboxGl from "react-map-gl";
-// import coords from './markers'
-// // import nbhdpic from '../nbhdpic.jpg'
-// // import L from 'leaflet'
-// // import points from './markers'
+
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicjN3ZWJlcjEiLCJhIjoiY2lyM3lhc3FnMDFrZ2Zwbm04cncwa2JkMiJ9.AeYZqyDiobmuxAVfIKE8gA';
-// ReactMapboxGl({
-//   accessToken: "pk.eyJ1IjoicjN3ZWJlcjEiLCJhIjoiY2lyM3lhc3FnMDFrZ2Zwbm04cncwa2JkMiJ9.AeYZqyDiobmuxAVfIKE8gA"
-// });
+
 let Map = class Map extends React.Component {
   map;
 
@@ -30,7 +21,7 @@ let Map = class Map extends React.Component {
       lng: -104.98879,
       lat: 39.75330,
       zoom: 12,
-      marker:[]
+      
       
     };
   }
@@ -50,7 +41,8 @@ let Map = class Map extends React.Component {
       center: [-104.98879, 39.75330],
       zoom: 12
     
-    });
+    }); 
+  
   //  const canvas = L.map(this.map.getCanvasContainer());
   //  console.log(canvas)
     // add geolocate control
@@ -173,12 +165,13 @@ let Map = class Map extends React.Component {
     this.map.on('click', 'neighborhoods', (e) => {
       // const coordinates = e.features[0].geometry.coordinates.slice();
       const name = e.features[0].properties.Name;
-      const icon = e.features[0].properties.icon;
+      
       new mapboxgl.Popup()
                     .setLngLat(e.lngLat)
-                    .setHTML(`<h1><b>${name}</b></h1><p>${icon}</p>`)
+                    .setHTML(`<h1><b>${name}</b></h1>`)
                     .addTo(this.map);  
     } )
+ 
    
      
    
