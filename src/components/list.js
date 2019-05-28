@@ -6,6 +6,12 @@
         location: '2920 Larimer St, Denver, CO 80205'
     },
     {
+        id:'h',
+        name: 'Dieblolt Brewery',
+        description: 'Great brewery',
+        location: '3855 Mariposa St, Denver, CO 80211'
+    },
+    {
         id:'g',
         name: 'Our Mutual Friend Brewing',
         description: 'Good brewery hop stop patio no tvs',
