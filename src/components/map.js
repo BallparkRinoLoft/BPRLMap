@@ -193,8 +193,9 @@ let Map = class Map extends React.Component {
      
       <div>
        
-          <SideBar />
-          
+        <div>       
+        <SideBar />
+         </div> 
         <div className="inline-block absolute top align-center mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
           <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
         </div>

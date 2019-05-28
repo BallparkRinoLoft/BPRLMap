@@ -15,18 +15,18 @@ let SideBar = class SideBar extends React.Component {
   
     this.props.active;
     return(
-      <div className='sidebar' class='viewport-full relative scroll-hidden'>
-            <div class='bg-darken10 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
-            <div class='absolute top-ml left bottom z1 w-full w240-ml px12 my60'>
-              <div class='flex-parent flex-parent--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken50-bold'>
-                <div class='px6 py6 scroll-auto'>
-                  <h3 class='txt-m txt-bold mb6'>Denver Neighborhoods</h3>
+      <div className='viewport-full relative scroll-hidden'>
+            <div className='bg-darken10 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
+            <div className='absolute top-ml left bottom z1 w-full w240-ml px12 my60'>
+              <div className='flex-parent flex-parent--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken50-bold'>
+                <div className='px6 py6 scroll-auto'>
+                  <h3 className='txt-m txt-bold mb6'>Denver Neighborhoods</h3>
                   
                     <p>The Paris Lofts are located in the Arapahoe Square Neighborhood.  The colored neighborhoods are the ones I recommend exploring most.</p> 
-                    <h4 class='txt-m txt-bold px6 py6'>Recommended Spots:</h4>   
+                    <h4 className='txt-m txt-bold px6 py6'>Recommended Spots:</h4>   
                     <List list={mylist} />              
                 </div>
-                <footer class='px12 py12 bg-gray-faint round-b-ml txt-s'>
+                <footer className='px12 py12 bg-gray-faint round-b-ml txt-s'>
                   Ballpark Rino Loft
                 </footer>
               </div>
@@ -39,9 +39,9 @@ let SideBar = class SideBar extends React.Component {
 const List = ({ list }) => (
   <ul>
     {list.map(item => (
-      <div class='px12 py12 pt3 shadow-darken25-on-hover cursor-pointer' key={item.id} onClick={()=>directions.setDestination(item.location)}>       
-          <div class='color-gray-dark'>{item.name}</div>
-          <div class='txt-light txt-s'>{item.description}</div>         
+      <div className='px12 py12 pt3 shadow-darken25-on-hover cursor-pointer' key={item.id} onClick={()=>directions.setDestination(item.location)}>       
+          <div className='color-gray-dark'>{item.name}</div>
+          <div className='txt-light txt-s'>{item.description}</div>         
       </div>
     ))}
   </ul>
